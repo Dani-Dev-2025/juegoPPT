@@ -88,44 +88,32 @@ public class JuegoPPT {
 		}
 
 		else if ((eleccionJugador == 1) && (eleccionCPU == 2)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> PIEDRA \n");
-			System.out.println("la máquina eligió ----> PAPEL \n");
+			System.out.println("____________________________\n\n elegiste -------------> PIEDRA \n la máquina eligió ----> PAPEL \n");
 			perder();
 		}
 
 		else if ((eleccionJugador == 1) && (eleccionCPU == 3)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> PIEDRA \n");
-			System.out.println("la máquina eligió ----> TIJERAS \n");
+			System.out.println("____________________________\n\n elegiste -------------> PIEDRA \n la máquina eligió ----> TIJERAS \n");
 			ganar();
 		}
 
 		else if ((eleccionJugador == 2) && (eleccionCPU == 1)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> PAPEL \n");
-			System.out.println("la máquina eligió ----> PIEDRA \n");
+			System.out.println("____________________________\n\n elegiste -------------> PAPEL \n la máquina eligió ----> PIEDRA \n");
 			ganar();
 		}
 
 		else if ((eleccionJugador == 2) && (eleccionCPU == 3)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> PAPEL \n");
-			System.out.println("la máquina eligió ----> TIJERAS \n");
+			System.out.println("____________________________\n\n elegiste -------------> PAPEL \n la máquina eligió ----> TIJERAS \n");
 			perder();
 		}
 
 		else if ((eleccionJugador == 3) && (eleccionCPU == 1)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> TIJERAS \n");
-			System.out.println("la máquina eligió ----> PIEDRA \n");
+			System.out.println("____________________________\n\n elegiste -------------> TIJERAS \n la máquina eligió ----> PIEDRA \n");
 			perder();
 		}
 
 		else if ((eleccionJugador == 3) && (eleccionCPU == 2)) {
-			System.out.println("____________________________\n");
-			System.out.println("elegiste -------------> TIJERAS \n");
-			System.out.println("la máquina eligió ----> PAPEL \n");
+			System.out.println("____________________________\n\n elegiste -------------> TIJERAS \n la máquina eligió ----> PAPEL \n");
 			ganar();
 		}
 
