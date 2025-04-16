@@ -1,17 +1,17 @@
 package juegoPPT;
 
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
 /**
  * la clase JuegoPPT simula el clásico juego de Piedra, Papel, Tijeras. Se compone de un método principal
  * que contiene el menu del juego (bucle do while con estructura switch, que tiene dos opciones: jugar y salir. 
  * Cada opción llama al método homónimo. 
  * 
  * @author Daniel Pacheco
- * @version 1.0
+ * @version 1.2
  * since 2025/03/31
  */
-
-import java.util.Scanner;
-import java.util.InputMismatchException;
 
 public class JuegoPPT {
 
@@ -46,11 +46,11 @@ public class JuegoPPT {
 					break;
 
 				default:
-					System.out.println("Error. Introduce una opción válida");
+					System.out.println("\n       ->> Error <<- \nIntroduce una opción válida \n............................");
 					break;
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Error. Introduce una opción válida");
+				System.out.println("\n       ->> Error <<- \nIntroduce una opción válida \n............................");
 				scanner.nextLine();
 			}
 
@@ -75,67 +75,80 @@ public class JuegoPPT {
 												// main al finalizar el programa
 
 		System.out.println(
-				"        Introduce:\n\n   [1] -> eliges PIEDRA \n   [2] -> eliges PAPEL \n   [3] -> eliges TIJERAS");
+				"       ¡Vamos allá!\n\n        Introduce:\n\n   [1] -> eliges PIEDRA \n   [2] -> eliges PAPEL \n   [3] -> eliges TIJERAS");
 		int eleccionCPU = (int) (Math.random() * 3) + 1;
 
 		int eleccionJugador = scanner.nextInt();
 
 		if ((eleccionJugador > 3) || (eleccionJugador < 1)) {
-			System.out.println("introduciste un valor no permitido!!");
+			System.out.println("¡¡introduciste un valor no permitido!!");
 		}
 
 		else if ((eleccionJugador == 1) && (eleccionCPU == 2)) {
-
-			System.out.println("elegiste... PIEDRA ");
-			System.out.println("la máquina eligió... PAPEL");
-			System.out.println("YOU LOSE!!");
+			System.out.println();
+			System.out.println("elegiste... -> PIEDRA ");
+			System.out.println("la máquina eligió... -> PAPEL");
+			perder();
 		}
 
 		else if ((eleccionJugador == 1) && (eleccionCPU == 3)) {
-
-			System.out.println("elegiste... PIEDRA");
-			System.out.println("la máquina eligió... TIJERAS");
-			System.out.println("YOU WIN!!");
+			System.out.println();
+			System.out.println("elegiste... -> PIEDRA");
+			System.out.println("la máquina eligió... -> TIJERAS");
+			ganar();
 		}
 
 		else if ((eleccionJugador == 2) && (eleccionCPU == 1)) {
 
-			System.out.println("elegiste... PAPEL");
-			System.out.println("la máquina eligió... PIEDRA");
-			System.out.println("YOU WIN!!");
+			System.out.println("elegiste... -> PAPEL");
+			System.out.println("la máquina eligió... -> PIEDRA");
+			ganar();
 		}
 
 		else if ((eleccionJugador == 2) && (eleccionCPU == 3)) {
-
-			System.out.println("elegiste... PAPEL");
-			System.out.println("la máquina eligió... TIJERAS");
-			System.out.println("YOU LOSE!!");
+			System.out.println();
+			System.out.println("elegiste... -> PAPEL");
+			System.out.println("la máquina eligió... -> TIJERAS");
+			perder();
 		}
 
 		else if ((eleccionJugador == 3) && (eleccionCPU == 1)) {
-
-			System.out.println("elegiste... TIJERAS");
-			System.out.println("la máquina eligió... PIEDRA");
-			System.out.println("YOU LOSE!!");
+			System.out.println();
+			System.out.println("elegiste... -> TIJERAS");
+			System.out.println("la máquina eligió... -> PIEDRA");
+			perder();
 		}
 
 		else if ((eleccionJugador == 3) && (eleccionCPU == 2)) {
-
-			System.out.println("elegiste...TIJERAS\n");
-			System.out.println("la máquina eligió... PAPEL\n");
-			System.out.println("YOU WIN!!\n");
+			System.out.println();
+			System.out.println("elegiste... -> TIJERAS\n");
+			System.out.println("la máquina eligió... -> PAPEL\n");
+			ganar();
 		}
 
 		else {
-			System.out.println("hábeis sacado lo mismo, EMPATE!!");
+			System.out.println("  hábeis sacado lo mismo... \n        ¡¡EMPATE!!");
 		}
 
 	} // fin método jugar()
+	
+	/**
+	 * método que muestra en pantalla el mensaje cuando el usuario gana
+	 */
+	public static void ganar() {
+		System.out.println(" ..........................\n    ***** YOU WIN!! ***** \n ..........................");
+	}
 
 	/**
-	 * el método salir() sirve para finalizar el juego, y muestra un mensaje de despedida.
+	 * método que muestra en pantalla el mensaje cuando el usuario pierde
 	 */
+	public static void perder() {
+		System.out.println(" ..........................\n   ***** YOU LOSE!! ***** \n ..........................");
+	}
 
+	/**
+	 * el método salir() muestra un mensaje de despedida cuando el usuario elige finalizar el juego.
+	 */
 	public static void salir() {
 		System.out.println("¡Hasta la próxima!");
 
