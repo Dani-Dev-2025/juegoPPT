@@ -1,0 +1,8 @@
+# Excluir archivos HTML, JavaScript y CSS de las estadísticas de lenguaje
+docs/* linguist-detectable=false
+*.html linguist-detectable=false
+*.js linguist-detectable=false
+*.css linguist-detectable=false
+
+# Asegurar que los archivos Java se detecten correctamente
+*.java linguist-language=Java
