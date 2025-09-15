@@ -44,8 +44,7 @@ JuegoPPT es una implementación del clásico juego de **Piedra, Papel, Tijeras**
 
 ## Licencia
 
-Este proyecto es **propietario** y todos los derechos están reservados. No se permite copiar, distribuir ni usar el código sin permiso explícito del autor.
-Las contribuciones son bienvenidas a través de pull requests en GitHub, siempre y cuando se respeten los términos de la licencia.
+Este proyecto está licenciado bajo la **Licencia MIT**. Esto significa que puedes usar, copiar, modificar, distribuir y sublicenciar el código libremente, siempre que incluyas el aviso de derechos de autor y la licencia original en cualquier copia del software.
 
 ---
 
